@@ -1,0 +1,36 @@
+.button {
+    position: relative;
+    padding: 12px 24px;
+    background-color: white;
+    color: rgb(17, 24, 39);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    width: 140px;
+    border-radius: 25px;
+    border: 1px solid #011226;
+}
+
+.button:hover {
+    background-color:#011226; /* تغيير الخلفية عند التمرير */
+    color: white; /* تغيير لون النص */
+    border-color: #011226; /* تغيير لون الحدود */
+}
+
+.button::after {
+    content: "→";
+    position: absolute;
+    right: 16px;
+    opacity: 2;
+    transform: translateX(-20px);
+    transition: all 0.3s ease;
+}
+
+
+.button:hover::after {
+    opacity: 2;
+    transform: translateX(0);
+}

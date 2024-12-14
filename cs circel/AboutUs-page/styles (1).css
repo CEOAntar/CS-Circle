@@ -1,0 +1,255 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: "Roboto", serif;
+    color: #333;
+}
+
+/* Hero Section */
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    
+    font-family: "Roboto", serif;
+    background: url(aboutus.png) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    color: white; 
+    font-size: 96px; 
+    font-family: "Roboto", serif; 
+    font-weight: 700; 
+    word-wrap: break-word
+}
+
+.hero-content p {
+
+    width: 663px; 
+    height: 222px; 
+    text-align: center; 
+    color: white; 
+    font-size: 26px; 
+    font-family: "Roboto", serif; 
+    font-weight: 600;word-wrap: break-word;
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 20px;
+}
+
+/* Circle Button Styling */
+.circle-button {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(90deg, #08FFB8, #5799F7);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.circle-button:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.5);
+}
+
+.circle-button:active {
+    transform: translateY(2px) scale(0.95);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .circle-button {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Section Styling */
+.about-title{
+    font-family: "Roboto", serif;
+    padding-top: 50px;
+    color: white;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    background: #011226;
+}
+
+.title-underline{
+    padding-top: 20px;
+    text-align: center;
+    background: #011226;
+}
+
+.about-section {
+    background: #011226;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    height: 100vh; /* Each section takes full screen height */
+}
+
+.about-content {
+    flex: 1;
+    padding: 70px;
+    text-align: left , right;
+}
+
+
+.about-content h2 {
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 36px;
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+.about-content h2::after {
+    font-family: "Roboto", serif;
+    color: white;
+    content: "";
+    display: block;
+    width: 350px;
+    height: 4px;
+    background-color: #00bfae;
+    margin-top: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.about-content p {
+    color: white;
+    line-height: 1.6;
+    font-size: 25px; 
+    font-family: "Roboto", serif; 
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+.about-image {
+    /* flex: 1; */
+    /* padding: 20px; */
+    text-align: center;
+    transform: rotate(10.08deg); 
+    transform-origin: 0 0; 
+    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 72px;
+}
+
+.about-image img {
+    border-radius: 50%;
+    max-width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.last-p p{
+     background-color:#011226 ; 
+     text-align: center; 
+     color: white; 
+     font-size: 36px; 
+     font-family: "Roboto", serif;
+     font-weight: 600; 
+     word-wrap: break-word;
+}
+/* Call-to-Action Section */
+.cta-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: #011226;
+}
+
+.cta-button {
+    width: 200px;
+    background-color:#2CB2BE;
+    color: white;
+    padding: 15px 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 250px;
+    text-decoration: none;
+    
+}
+
+.cta-button:hover {
+    background-color: #009b8c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}

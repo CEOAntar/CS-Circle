@@ -1,0 +1,28 @@
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -16px;
+}
+
+.category-wrapper {
+    width: 100%;
+    padding: 16px;
+}
+
+@media (min-width: 768px) {
+    .category-wrapper {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .category-wrapper {
+        width: 33.333%;
+    }
+}

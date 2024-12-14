@@ -1,0 +1,233 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@keyframes slideInText {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); /* Starts off-screen to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Moves into its normal position */
+  }
+}
+
+/* Keyframes for buttons to fade-in from below */
+@keyframes fadeInButtons {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Starts below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends in its normal position */
+  }
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(0deg, #011226 21.04%, #062850 98.89%);  color: white;
+  min-height: 50%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.navbar .logo {
+  font-size: 5px;
+  font-weight:normal;
+  color: white;
+}
+.navbar .logoimg{
+  size: 20px;
+  width: 30px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #3acfd5;
+}
+
+.navbar .login-btn {
+  background: #3acfd5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .login-btn:hover {
+  background-color: #369fc5;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  padding-bottom: 70px;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 90px;
+  font-weight: bold;
+  animation: slideInText 1.5s ease-out; 
+  margin-bottom: 10px;
+}
+
+.hero .highlight {
+  background: linear-gradient(to right, #3acfd5, #3a8ed5);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.hero p {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0px 0;
+  color: #d0d6e2;
+  animation: slideInText 1.5s ease-out;
+}
+
+.hero .hero-buttons {
+  margin-top: 30px;
+  animation: fadeInButtons 1.5s ease-out;
+}
+
+.hero .primary-btn,
+.hero .secondary-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .primary-btn {
+  margin-right: 10px;
+  background: linear-gradient(to right, #3acfd5, #3a8ed5);
+  color: white;
+  box-shadow: 0 4px 8px rgba(58, 141, 213, 0.2); /* إضافة ظل خفيف */
+}
+
+.hero .secondary-btn {
+  background: transparent;
+  border: 2px solid #3acfd5;
+  color: #3acfd5;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 8px rgba(58, 141, 213, 0.2); /* إضافة ظل خفيف */
+}
+
+.hero .primary-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #3a8ed5, #3acfd5); /* تغيير اللون عند التمرير */
+  color: white;
+  box-shadow: 0 6px 12px rgba(58, 141, 213, 0.4); /* زيادة الظل */
+}
+
+.hero .secondary-btn:hover {
+  transform: scale(1.05);
+  background: rgba(58, 141, 213, 0.1); /* تغيير اللون عند التمرير */
+  color: #3acfd5;
+  box-shadow: 0 6px 12px rgba(58, 141, 213, 0.4); /* زيادة الظل */
+}
+
+
+
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.feature-card {
+  width: 378.344px;
+  height: 175px;
+  margin-left: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px; /* زيادة الحشو */
+  border-radius: 16px;
+  text-align: center;
+  flex: 1;
+  max-width: 400px; /* زيادة العرض */
+  transition: transform 0.3s ease;
+  /*transition: transform 0.3s ease, border 0.3s ease;*/ /* إضافة انتقال للحدود */
+}
+
+.feature-card h3 {
+  font-family: "Roboto", serif;
+  font-size: 28px;
+  font-style: normal;
+  line-height: 10px;
+  text-align: left;
+  color: #53F1FF;
+  font-weight:700;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  line-height: 30px;
+  text-align: left;
+  font-size: 10px;
+  color: #d0d6e2;
+}
+
+.feature-card a {
+  font-family: "Roboto", serif;
+  text-decoration: none;
+  color: #53F1FF;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: inline-block; /* لجعل الرابط مثل العنصر القابل للتحريك */
+  text-align: left;
+  margin-top: 35px; /* إضافه مسافة أعلى الرابط */
+  margin-right: 230px;
+}
+
+.feature-card a:hover {
+  color: #3a8ed5;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #404047; /* إضافة الحد الرمادي */
+}
+.features.feature-card a{
+  text-align: left;
+}
