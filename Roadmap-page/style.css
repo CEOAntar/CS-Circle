@@ -1,0 +1,247 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @keyframes slideInText {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%); /* Starts off-screen to the left */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Moves into its normal position */
+    }
+  }
+  
+  /* Keyframes for buttons to fade-in from below */
+  @keyframes fadeInButtons {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Starts below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Ends in its normal position */
+    }
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(0deg, #011226 21.04%, #062850 98.89%);  color: white;
+    min-height: 50%;
+  }
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .navbar .logo {
+    font-size: 5px;
+    font-weight:normal;
+    color: white;
+  }
+  .navbar .logoimg{
+    size: 20px;
+    width: 30px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #3acfd5;
+  }
+  
+  .navbar .login-btn {
+    background: #3acfd5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar .login-btn:hover {
+    background-color: #369fc5;
+  }
+
+  /* Hero Section */
+.hero {
+    text-align: center;
+    padding: 170px 20px;
+    padding-bottom: 70px;
+  }
+  
+  .hero h1 {
+    font-family:inherit;
+    font-size: 80px;
+    font-weight: bold;
+    animation: slideInText 1.5s ease-out; 
+  }
+  
+  .hero .highlight {
+    background: linear-gradient(to right, #3acfd5, #3a8ed5);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  .hero p {
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px 0;
+    color: #d0d6e2;
+    animation: slideInText 2s ease-out;
+  }
+  
+  .hero .hero-buttons {
+    margin-top: 50px;
+    animation: fadeInButtons 2s ease-out 0.5s;
+  }
+  
+  .hero .primary-btn{  
+    width: 15vw;
+    height: 6vh;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-right: 10px;
+    background: linear-gradient(to right, #3acfd5, #3a8ed5);
+    color: white;
+  }
+
+  .hero .primary-btn:hover{
+     transform: scale(1.05);
+  }
+  
+  .hero-buttons .primary-btn:hover, .hero-buttons .secondary-btn:hover {
+    transform: scale(1.1);
+  }
+
+  /* cources Section */
+  
+  .courses{
+    text-align: center;
+    padding: 170px 20px;
+    padding-bottom: 70px;
+  }
+
+  .course .highlight{
+    background: linear-gradient(to right, #3acfd5, #3a8ed5);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .course h1{
+    animation: slideInText 1.5s ease-out; 
+    font-family:inherit;
+    font-size: 40px;
+    font-weight: bold; 
+  }
+
+  .course p{
+    animation: slideInText 1.5s ease-out; 
+    line-height: 25px;
+    color: gray;
+    font-family:inherit;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .course-gride{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:32px;
+  }
+
+  .course-card{
+    font-family: inherit;
+    font-weight: bold;
+    padding-top: 25px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .course-card img{
+    width: 100%;
+    height: 150px;
+    object-fit: fill; 
+  }
+  
+  .course-card a{
+    color: white;
+    text-decoration: none;
+  }
+
+  
+  /* will get Section */
+  
+  .will-get{
+     padding-top: 90px;
+      font-family: 'Sohne', Helvetica, Arial, sans-serif;
+      text-align: center;
+  }
+
+  .will-get .title h1{
+    color: #3a8ed5;
+    font-size: 60px;
+    font-weight: bold;
+
+  }
+
+  
+  .will-get p {
+    padding-top: 25px;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0px 0;
+    color: #d0d6e2;
+  }
+
+  .will-get .will-get-button {
+    margin-top: 50px;
+    animation: fadeInButtons 2s ease-out 0.5s;
+  }
+
+  .will-get .sign-btn{  
+    width: 15vw;
+    height: 6vh;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-right: 10px;
+    background: linear-gradient(to right, #3acfd5, #3a8ed5);
+    color: white;
+    
+  }

@@ -1,0 +1,206 @@
+:root {
+    /* Whale-inspired Color Palette */
+    --primary-dark: #0a192f;
+    --primary: #1e3a8a;
+    --secondary: #3b82f6;
+    --accent: #38bdf8;
+    --light: #f0f9ff;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-400: #94a3b8;
+    
+    /* Typography */
+    --font-main: 'Space Grotesk', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General Body Styling */
+body {
+    background: linear-gradient(180deg, #062850 16.21%, #011226 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    height: 1024px;
+    line-height: 1.6;
+}
+
+/* Resetting the list */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*nav bar*/
+.navbar {
+    background-color: rgba(0, 0, 0, 0); /* شفاف بالكامل */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* نفس الارتفاع */
+    z-index: 999;
+    transform: translateY(0); /* التأكد من أن الشريط في مكانه */
+    animation: fadeInUp 0.7s ease-in-out forwards;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* عند التمرير */
+.navbar.scroll-active {
+    background-color: rgba(0, 0, 0, 0.1); /* طبقة بلون شفاف */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+    transform: translateY(0); /* تثبيت الموقع */
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-con {
+    float: left;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 13px;
+}
+
+.logo img {
+    object-fit: contain;
+}
+
+.logo-text {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 7px;
+}
+
+.navs {
+    float: right;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 13px;
+}
+
+.navs ul {
+    display: flex;
+}
+
+.navs ul li {
+    margin-left: 20px;
+}
+
+.navs ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navs ul li a:hover {
+    color: #00bcd4;
+}
+.threads-container {
+    padding-top: 90px;
+    min-height: 100vh;
+}
+
+.thread-filters {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    margin-left: 22px;
+}
+
+.filter-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 20px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--light);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-button.active {
+    background: var(--secondary);
+    border-color: var(--accent);
+}
+
+.thread-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.thread-card {
+    background: rgba(30, 58, 138, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    margin-left: 63px;
+    margin-right: 63px;
+    margin-top: 8px;
+    padding-bottom: 31px;
+    padding-left: 41px;
+    transition: transform 0.3s ease;
+}
+
+.thread-card:hover {
+    transform: translateY(-2px);
+}
+
+.thread-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-right: 15px;
+    color: #FFF;
+}
+
+.thread-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    color: var(--gray-400);
+    font-size: 0.875rem;
+}
+
+.thread-stats {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    margin-right: 25px;
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--gray-300);
+}

@@ -1,0 +1,426 @@
+/* General Body Styling */
+body {
+    background: linear-gradient(180deg, #062850 16.21%, #011226 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    height: 1024px;
+}
+
+/* Resetting the list */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* الحالة الابتدائية للـ Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0); /* شفاف بالكامل */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* نفس الارتفاع */
+    z-index: 999;
+    transform: translateY(0); /* التأكد من أن الشريط في مكانه */
+    animation: fadeInUp 0.7s ease-in-out forwards;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+/* عند التمرير */
+.navbar.scroll-active {
+    background-color: rgba(0, 0, 0, 0.1); /* طبقة بلون شفاف */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+    transform: translateY(0); /* تثبيت الموقع */
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.logo-con {
+    float: left;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 13px;
+}
+
+.logo img {
+    object-fit: contain;
+}
+
+.logo-text {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 7px;
+}
+
+.navs {
+    float: right;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 13px;
+}
+
+.navs ul {
+    display: flex;
+}
+
+.navs ul li {
+    margin-left: 20px;
+}
+
+.navs ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navs ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Headline */
+.headline {
+    text-align: center;
+    color: #FFF;
+    font-size: 32px;
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 120px;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.headline span {
+    color: #C7C7C7;
+    font-size: 16px;
+    font-weight: 700;
+}
+.headline .primary-btn{
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 10px;
+    background: linear-gradient(to right, #3acfd5, #3a8ed5);
+    color: white;
+}
+
+.headline .primary-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #3a8ed5, #3acfd5); /* تغيير اللون عند التمرير */
+    color: white;
+    box-shadow: 0 6px 12px rgba(58, 141, 213, 0.4); /* زيادة الظل */
+  }
+
+/* Cards Section */
+.cards-sec {
+    width: 100%; /* عرض كامل الصفحة */
+    text-align: center;
+}
+
+.cards-wrapper {
+    width: 90%; /* تحديد عرض الحاوية لتناسب جميع البوكسات */
+    margin: 50px auto 0; /* إضافة مسافة علوية */
+    transform: translateY(148px); /* الإزاحة لأسفل */
+    transform-origin: top center; /* تحديد نقطة الأصل للحركة بحيث تكون من المنتصف العلوي */
+    overflow: hidden; /* التأكد من إخفاء أي عناصر عائمة */
+    padding-top: 20px; /* خيار إضافي لزيادة المسافة داخل الحاوية */
+    
+}
+
+/* Cards Styling */
+.cards {
+    width: 30.5%; /* تحديد عرض البوكس ليكون مناسبًا مع عرض الحاوية */
+    height: 397px;
+    background: #091B30;
+    float: left; /* جعل البوكسات بجانب بعضها */
+    margin: 0 1.25%; /* مسافة بين البوكسات */
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease , border-radius 0.3 ease , border 0.3 ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.7s ease-in-out forwards;
+}
+.cards h2{
+    text-align: left;
+    padding-left: 36px;
+    padding-top: 25px;
+    color: #00E1F5 ;
+    font-family: "Roboto", serif;
+    font-style: normal;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 20px; /* 71.429% */
+}
+
+.cards .setion-con1{
+    margin-left: 36px;
+    margin-top: 43px;
+
+}
+
+.cards .setion-con1 .section{
+    width: 306px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #0C2644;
+    margin-top: 23px;
+    
+}
+.cards .setion-con1 .section h3{
+    text-align: left;
+    color: #DBDBDB;
+    font-family: "Space Grotesk";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+    padding-top: 10px;
+    padding-left: 10px;
+    display: inline-block;
+    position: relative; /* لجعل الحركه الخاصة بالـ h3 فقط */
+    left: -79px; /* استخدم left بدلًا من transform لتحريك العنصر */
+    margin: 0;
+    margin: 0;
+}
+.cards .setion-con1 .section .Sp{
+    text-align: right;
+    font-size: 8px;
+    color: #878787;
+    transform-origin: right center; 
+    position: relative; /* لجعل الحركه الخاصة بالـ .Sp فقط */
+    right: -69px; /* استخدم right بدلًا من transform لتحريك العنصر */
+    margin: 0;
+}
+
+
+.cards .setion-con2{
+    margin-left: 36px;
+    margin-top: 44px;
+
+}
+
+.cards .setion-con2 .section2{
+    width: 322px;
+    height: 82px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #0C2644;
+    margin-top: 43px;
+}
+
+.cards .setion-con2 .section2 h3{
+    text-align: left;
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 100% */
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+
+.cards .setion-con2 .section2 .Machine{
+    text-align: left;
+    font-size: 8px;
+    color: #878787;
+    transform-origin: right center; 
+    position: relative; /* لجعل الحركه الخاصة بالـ .Sp فقط */
+    right: 115px; /* استخدم right بدلًا من transform لتحريك العنصر */
+    top: -15px;
+    padding-top: 10px;
+}
+
+.cards .setion-con2 .section2 .FULL{
+    text-align: left;
+    font-size: 8px;
+    color: #878787;
+    transform-origin: right center; 
+    position: relative; /* لجعل الحركه الخاصة بالـ .Sp فقط */
+    right: 104px; /* استخدم right بدلًا من transform لتحريك العنصر */
+    top: -15px;
+    padding-top: 10px;
+}
+
+.cards .setion-con2 .section2 .avail{
+    width: 66px;
+    height: 22px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    opacity: 0.3;
+    background: #39B78D;
+    position: relative;
+    left: 244px;
+    top: -60px;
+}
+
+.cards .setion-con2 .section2 .avail P{
+    color: #00FFAB;
+    font-family: "Space Grotesk";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 200% */
+    padding-top: 1px;
+    z-index: 1;
+}
+
+.cards .section-con3{
+    margin-left: 36px;
+    margin-top: 44px;
+}
+
+.cards .section-con3 .section3{
+    width: 322px;
+    height: 137px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #0C2644;
+    margin-top: 43px;
+}
+
+.cards .section-con3 .section3 h3{
+    text-align: left;
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    padding-top: 15px;
+    padding-left: 10px;
+    position: relative;
+    left: 11px;
+}
+
+.cards .section-con3 .section3 p{
+    text-align: left;
+    color: #878787;
+    font-family: "Space Grotesk";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px; /* 330% */
+    position: relative;
+    left: 25px;
+}
+
+.cards .section-con3 .section3 span{
+    text-align: right;
+    color: #BEBEBE;
+    font-family: "Space Grotesk";
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px; /* 412.5% */
+    position: relative;
+    left: 123px;
+    bottom: 67px;
+}
+.cards .section-con3 .section3-two{
+    width: 322px;
+    height: 95px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #0C2644;
+    margin-top: 23px;
+}
+.cards .section-con3 .section3-two h3{
+    text-align: left;
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    padding-top: 15px;
+    padding-left: 10px;
+    position: relative;
+    left: 11px;
+}
+
+.cards .section-con3 .section3-two p{
+    text-align: left;
+    color: #878787;
+    font-family: "Space Grotesk";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px; /* 330% */
+    position: relative;
+    left: 25px;
+    top: -22px;
+}
+
+.cards .section-con3 .section3-two span{
+    text-align: right;
+    color: #BEBEBE;
+    font-family: "Space Grotesk";
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px; /* 412.5% */
+    position: relative;
+    left: 123px;
+    bottom: 85px;
+}
+
+.cards-sec .cards:hover{
+    border: 1px solid #404047;
+    transform: scale(1);
+    color: white;
+    -webkit-box-shadow: 0px 0px 98px -79px rgba(217,217,217,1);
+    -moz-box-shadow: 0px 0px 98px -79px rgba(217,217,217,1);
+    box-shadow: 0px 0px 98px -79px rgba(217,217,217,1);
+}
+/* يمكن ضبط توقيت التأخير بين الكاردات */
+.cards:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.cards:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* تعريف الـ Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
